@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Als erstes brauche ich ein root Element-->
+<sängerInnen>
+<!-- Hier starten die SängerInnen -->
+ <sängerIn_1>
+ <!-- Sänger 1, interpretiert abstände nicht als ein Attribut also werden Zahlen mit _ verbunden -->
+ <!-- Auch alle anderen Abstände müssen entfernt werden-->
+<vor-name> Georg </vor-name>
+<nach-name> Danzer </nach-name>
+<_BesterSong länge = '3:40'> Jö Schau </_BesterSong>
+<!--Elemente müssen in der gleichen Reihenfolge geöffnet/geschlossen werden, _BesterSong muss geschlossen werden-->
+<WeitererSong><Titel> Frauenmörder Wurm </Titel></WeitererSong>
+</sängerIn_1>
+<sängerIn_2>
+ <!-- Sänger 2, Fehler, er heißt Wolfgang, nicht Wolfgamg -->
+ <vor-name> Wolfgang </vor-name>
+<nach-name> Ambros </nach-name>
+<!-- zur Einheitlichkeit sollten alle _BesterSong tags gleich ausschauen-->
+ <_BesterSong> Da Hofer </_BesterSong>
+</sängerIn_2>
+ <sängerIn_3>
+<!-- Sängerin 3, achtung case sensitive, der Endtag muss geändert werden S zu s -->
+<vor-name > Marianne </vor-name>
+ <nach-name> Mendt </nach-name>
+ <_BesterSong> Wie a Glockn ’n </_BesterSong>
+</sängerIn_3>
+</sängerInnen>
