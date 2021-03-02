@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Projektverwaltung SYSTEM "practicals_02-sourcecode_02-projektverwaltung.dtd">
+<Projektverwaltung>
+    <Mitarbeiter Id="mi01" Bereich="Forschung">
+        <Vorname>Michael</Vorname>
+        <Nachname>Hauser</Nachname>
+    </Mitarbeiter>
+    <Mitarbeiter Id="mi02" Bereich="Vertrieb">
+        <Vorname>Anton</Vorname>
+        <ZweiterVorname>Maria</ZweiterVorname>
+        <Nachname>Eins</Nachname>
+    </Mitarbeiter>
+    <Mitarbeiter Id="mi03" Bereich="Intern">
+        <Vorname>Lisa</Vorname>
+        <Nachname>Intern</Nachname>
+    </Mitarbeiter>
+<Projekt><Name>BI-Project</Name>
+<Abteilung>IT</Abteilung>
+<Deadline>3.12.2021</Deadline>
+<Teilnehmer Mitarbeiter="mi01" />
+</Projekt>
+<Projekt>
+    <Name>COVID Screening</Name>
+        <Abteilung>Intern</Abteilung>
+        <Deadline>3.3.2021</Deadline>  
+        <Deadline>6.3.2021</Deadline>
+        <Teilnehmer Mitarbeiter="mi03" />
+</Projekt>
+<Projekt> <Name>Care Calls</Name>
+    <Abteilung>Vertrieb</Abteilung>
+    <Deadline>2.3.2020</Deadline>
+
+<Teilnehmer Mitarbeiter="mi02" />
+</Projekt>
+</Projektverwaltung>

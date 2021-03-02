@@ -1,0 +1,13 @@
+<!ELEMENT Projektverwaltung (Projekt | Mitarbeiter)*>
+<!ELEMENT Projekt (Name, Abteilung, Deadline+, Teilnehmer)>
+<!ELEMENT Mitarbeiter (Vorname, ZweiterVorname?, Nachname)>
+<!ELEMENT Name (#PCDATA)>
+<!ELEMENT Abteilung (#PCDATA)>
+<!ELEMENT Vorname (#PCDATA)>
+<!ELEMENT ZweiterVorname (#PCDATA)>
+<!ELEMENT Nachname (#PCDATA)>
+<!ELEMENT Deadline (#PCDATA)>
+<!ELEMENT Teilnehmer EMPTY>
+<!ATTLIST Teilnehmer Mitarbeiter IDREFS #REQUIRED>
+<!ATTLIST Mitarbeiter Id ID #REQUIRED>
+<!ATTLIST Mitarbeiter Bereich (Forschung|Intern|Vertrieb) #REQUIRED>

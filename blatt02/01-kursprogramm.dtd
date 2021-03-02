@@ -1,0 +1,19 @@
+<!ELEMENT kursprogramm (kurs+)>
+<!ELEMENT kurs (bezeichnung,kursinhalt,referententeam,termin,anhang,nachfolgekurs?)>
+<!ELEMENT bezeichnung (#PCDATA)>
+<!ELEMENT kursinhalt (#PCDATA)>
+<!ELEMENT termin (#PCDATA)>
+<!ELEMENT anhang (#PCDATA)>
+<!ELEMENT nachfolgekurs (#PCDATA)>
+<!ELEMENT referententeam (referent+)>
+<!ELEMENT referent (name,adresse,kontakt,bild?)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT adresse (#PCDATA)>
+<!ELEMENT kontakt (tel*,email*)>
+<!ELEMENT tel (#PCDATA)>
+<!ELEMENT email (#PCDATA)>
+<!ATTLIST kursinhalt lang CDATA #IMPLIED>
+<!ATTLIST kurs k_id ID #REQUIRED>
+<!ATTLIST nachfolgekurs k_id IDREF #REQUIRED>
+<!ATTLIST referent ref_id ID #REQUIRED>
+<!ELEMENT bild (ANY*)>

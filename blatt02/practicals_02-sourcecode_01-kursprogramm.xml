@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE kursprogramm SYSTEM "01-kursprogramm.dtd">
+<kursprogramm> 
+  <kurs k_id="xml1">
+    <bezeichnung>XML Intro</bezeichnung>
+    <kursinhalt lang="de">Praxiskurz XML</kursinhalt>
+    <referententeam>
+      <referent ref_id="_01">
+        <name>Max Mustermann</name>
+        <adresse>Hauptplatz 2, 8010 Graz</adresse>
+        <kontakt>
+          <tel>0316 123898</tel>
+          <email>max@mustermann.at</email>
+        </kontakt>
+        <bild />
+      </referent>
+    </referententeam>
+    <termin>05.04.2021</termin>
+    <anhang>Der Kurs findet alle 3 Wochen erneut statt.</anhang>
+    <nachfolgekurs k_id="xml2" />
+  </kurs>
+
+  <kurs k_id="xml2">
+    <bezeichnung>XML Intro</bezeichnung>
+    <kursinhalt>Praxiskurz XML</kursinhalt>
+    <referententeam>
+      <referent ref_id="_02">
+        <name>Martina Mustermann</name>
+        <adresse>Hauptplatz 4, 8010 Graz</adresse>
+        <kontakt>
+          <email>martina@mustermann.at</email>
+        </kontakt>
+      </referent>
+    </referententeam>
+    <termin>05.04.2021</termin>
+    <anhang>Der Kurs findet alle 3 Wochen erneut statt.</anhang>
+  </kurs>   
+</kursprogramm>
