@@ -1,3 +1,4 @@
+<!-- comment-->
 <!ELEMENT Projektverwaltung (Projekt | Mitarbeiter)*>
 <!ELEMENT Projekt (Name, Abteilung, Deadline+, Teilnehmer)>
 <!ELEMENT Mitarbeiter (Vorname, ZweiterVorname?, Nachname)>
