@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<xsd:element name="Abgabesystem" type="abgaben"/>
+    <xsd:complexType name="abgaben">
+        <xsd:sequence><xsd:element name="Abgabe" type="abgabe" maxOccurs="unbounded" minOccurs="0"></xsd:element> </xsd:sequence>
+            </xsd:complexType>
+    <xsd:complexType name="abgabe">
+        <xsd:all>
+            <xsd:element name="Hash" type="Hash"></xsd:element>
+            <xsd:element name="Abgabedatum" type="xsd:date"></xsd:element>
+            <xsd:element name="Abgabezeit" type="xsd:time"></xsd:element>
+            <xsd:element name="Dateien" type="Dateien"></xsd:element>
+            <xsd:element name="Studierende" type="Studierende"></xsd:element>
+            <xsd:element name="Korrekturstatus" type="Korrekturstatus"></xsd:element>
+            <xsd:element name="Plagiatswahrscheinlichkeit" type="Plagiatswahrscheinlichkeit" minOccurs="0"></xsd:element>
+        </xsd:all>
+        <xsd:attribute name="Abgabe-ID" use="required">
+            <xsd:simpleType>
+<xsd:restriction base="xsd:string">
+    <xsd:pattern value="a[1-9]_[0-9]{8}"></xsd:pattern>
+</xsd:restriction>
+        </xsd:simpleType></xsd:attribute>
+    
+    </xsd:complexType>
+    <xsd:simpleType name="Hash">
+
+    <xsd:restriction base="xsd:string">
+        <xsd:pattern value="[0-9][a-zA-Z]{8}[0-9]"></xsd:pattern>
+    </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:complexType name="Dateien">
+<xsd:sequence>
+    <xsd:element name="Datei" type="Datei_ex" maxOccurs="unbounded" minOccurs="1"></xsd:element>
+</xsd:sequence>
+   
+       </xsd:complexType>
+    
+  <xsd:simpleType name="Datei">
+      <xsd:restriction base="xsd:string"></xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="Datei_ex">
+<xsd:simpleContent>
+    <xsd:extension base="Datei">
+        <xsd:attribute name="Datei-ID" type="xsd:string" use="required"/>
+        <xsd:attribute name="Dateigröße" type="xsd:integer" use="required"/>
+    </xsd:extension>
+</xsd:simpleContent>
+       </xsd:complexType>
+       <xsd:complexType name="Studierende">
+           <xsd:all> <xsd:element name="Matrikelnummer"><xsd:simpleType><xsd:restriction base="xsd:int"><xsd:minInclusive value="1000000"/>
+           <xsd:maxInclusive value="99999999"/>
+           </xsd:restriction></xsd:simpleType></xsd:element>
+           <xsd:element name="Namen"><xsd:simpleType><xsd:restriction base="xsd:string"></xsd:restriction></xsd:simpleType></xsd:element>
+           <xsd:element name="Studiengang"><xsd:simpleType><xsd:restriction base="xsd:string"></xsd:restriction></xsd:simpleType></xsd:element>
+           <xsd:element name="Studienbeitrag"><xsd:complexType><xsd:sequence/><xsd:attribute name="status" type="xsd:boolean" use="required"/></xsd:complexType></xsd:element>
+           </xsd:all>
+       </xsd:complexType>
+       <xsd:complexType name="Korrekturstatus">
+         <xsd:choice>
+             <xsd:element name="Open"><xsd:complexType><xsd:sequence/></xsd:complexType></xsd:element>
+             <xsd:element name="InProgress"><xsd:complexType><xsd:sequence/></xsd:complexType></xsd:element>
+             <xsd:element name="Closed"><xsd:complexType><xsd:sequence/></xsd:complexType></xsd:element>
+         </xsd:choice>
+       </xsd:complexType>
+       <xsd:simpleType name="Plagiatswahrscheinlichkeit"><xsd:restriction base="xsd:string">
+           <xsd:enumeration value="mild"/>
+           <xsd:enumeration value="moderate"/>
+           <xsd:enumeration value="severe"/>
+       </xsd:restriction></xsd:simpleType>
+    
+        </xsd:schema>

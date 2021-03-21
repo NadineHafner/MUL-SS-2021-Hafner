@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Abgabesystem 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="01-abgabesystem.xsd"
+>
+<Abgabe Abgabe-ID="a1_58392920">
+    <Abgabedatum>2020-01-24</Abgabedatum><Hash>0DealkFTc8</Hash><Abgabezeit>20:15:12</Abgabezeit>
+<Dateien><Datei Datei-ID="hü1" Dateigröße="23">Meine Hü</Datei></Dateien>
+<Studierende><Matrikelnummer>1999999</Matrikelnummer>
+    <Studiengang>BSD</Studiengang>
+    <Studienbeitrag status="true" />
+    <Namen>Anna</Namen>
+    
+</Studierende>
+<Korrekturstatus><Closed /></Korrekturstatus>
+<Plagiatswahrscheinlichkeit>moderate</Plagiatswahrscheinlichkeit></Abgabe>
+<Abgabe Abgabe-ID="a1_58894845">
+    <Abgabezeit>22:21:20</Abgabezeit>
+    <Abgabedatum>2022-04-30</Abgabedatum>
+    <Studierende><Namen>Krainz Max</Namen>
+    <Studiengang>Business Data Science</Studiengang>
+<Studienbeitrag status="false" />
+<Matrikelnummer>44458890</Matrikelnummer></Studierende>
+<Dateien><Datei Datei-ID="dt01" Dateigröße="456">Blatt01/02-Table.html</Datei>
+<Datei Datei-ID="dt02" Dateigröße="8686">Blatt03/02-abgabesystem.xml</Datei></Dateien>
+<Korrekturstatus><Open /></Korrekturstatus>
+<Hash>8lsleohfL9</Hash>
+</Abgabe>
+
+</Abgabesystem>
