@@ -58,9 +58,9 @@
        </xsd:complexType>
        <xsd:complexType name="Korrekturstatus">
          <xsd:choice>
-             <xsd:element name="Open"><xsd:complexType><xsd:sequence/></xsd:complexType></xsd:element>
-             <xsd:element name="InProgress"><xsd:complexType><xsd:sequence/></xsd:complexType></xsd:element>
-             <xsd:element name="Closed"><xsd:complexType><xsd:sequence/></xsd:complexType></xsd:element>
+             <xsd:element name="Open" minOccurs="0"><xsd:complexType><xsd:sequence/></xsd:complexType></xsd:element>
+             <xsd:element name="InProgress" minOccurs="0"><xsd:complexType><xsd:sequence/></xsd:complexType></xsd:element>
+             <xsd:element name="Closed" minOccurs="0"><xsd:complexType><xsd:sequence/></xsd:complexType></xsd:element>
          </xsd:choice>
        </xsd:complexType>
        <xsd:simpleType name="Plagiatswahrscheinlichkeit"><xsd:restriction base="xsd:string">
