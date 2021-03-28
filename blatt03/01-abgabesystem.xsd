@@ -63,10 +63,16 @@
              <xsd:element name="Closed" minOccurs="0"><xsd:complexType><xsd:sequence/></xsd:complexType></xsd:element>
          </xsd:choice>
        </xsd:complexType>
-       <xsd:simpleType name="Plagiatswahrscheinlichkeit"><xsd:restriction base="xsd:string">
-           <xsd:enumeration value="mild"/>
-           <xsd:enumeration value="moderate"/>
-           <xsd:enumeration value="severe"/>
-       </xsd:restriction></xsd:simpleType>
+       <xsd:complexType name="Plagiatswahrscheinlichkeit"><xsd:attribute name="value">
+        <xsd:simpleType>
+            <xsd:restriction base="xsd:string">
+                <xsd:enumeration value="mild" />
+                <xsd:enumeration value="moderate"/>
+                <xsd:enumeration value="severe"/>
+            </xsd:restriction>
+        
+        </xsd:simpleType>
+        </xsd:attribute>
+       </xsd:complexType>
     
         </xsd:schema>

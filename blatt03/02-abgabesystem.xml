@@ -13,7 +13,7 @@
     
 </Studierende>
 <Korrekturstatus><Closed /></Korrekturstatus>
-<Plagiatswahrscheinlichkeit>moderate</Plagiatswahrscheinlichkeit></Abgabe>
+<Plagiatswahrscheinlichkeit value="mild"/></Abgabe>
 <Abgabe Abgabe-ID="a1_58894845">
     <Abgabezeit>22:21:20</Abgabezeit>
     <Abgabedatum>2022-04-30</Abgabedatum>
