@@ -28,21 +28,18 @@ posten.addEventListener('click',function(event){
       jeintrag.appendChild(ein);
       jeintrag.appendChild(document.createElement('hr'));
       //ein neuer jeintrag braucht einen Eventlistener
-      jeintrag.addEventListener('dblclick',function(e){
+      jeintrag.firstElementChild.addEventListener('dblclick',function(e){
         addTrigger(jeintrag);
       })
       journal.appendChild(jeintrag);
-      //jourEntry=document.getElementsByClassName('j-eintrag');
-      //generateTrigger();
-      
-    }
+     }
   
     //Zurücksetzen der Texteingabe und aller Werte
     title.value = '';
     content.value='';
     posten.value='Posten!';
     count.innerHTML=0;
-  }
+  };
   // triggerFunktion, zwecks wiederverwertbarkeit( soll 2mal angewendet werden)
 var addTrigger=function(element){
   posten.value='Update!';
@@ -53,18 +50,14 @@ var addTrigger=function(element){
   //counter muss upgedated werden
   count.innerHTML=content.value.length;
   journal.removeChild(element);
-}
-  var generateTrigger=function(){
-    [...jourEntry].forEach(function(element) {
-      console.log(element.firstElementChild.innerText);
-      console.log(element.parentElement);
-      element.firstElementChild.addEventListener('dblclick', function(e){
-     addTrigger(element);
-    })});
-  }
- generateTrigger();
- content.addEventListener('keyup',function(e){
+};
+content.addEventListener('keyup',function(e){
    count.innerHTML=content.value.length;
- })
+ });
+ [...jourEntry].forEach(function(element){
+  element.firstElementChild.addEventListener('dblclick',function(e){
+    addTrigger(element);
+  })
+});
  
   
