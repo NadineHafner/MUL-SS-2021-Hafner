@@ -7,12 +7,14 @@ var jourEntry=document.getElementsByClassName('j-eintrag');
 //der counter ist das nullte Element der collection aller Elemente der Klasse counter
 var count=document.getElementsByClassName('counter')[0];
 var journal=document.getElementById('journal');
+//variable, die einen Wert erhält, wenn ein Eintrag geupdated werden soll
+var toReplace=null;
 
 posten.addEventListener('click',function(event){
-    postEntry();
+    postEntry(toReplace);
    });
   //extra funktion um neuen Eintrag zu machen
-  var postEntry=function(){
+  var postEntry=function(element){
     if(title.value != '' && content.value != '')
     {
       //Element Eintrag hat Kindselement j-eintrag, der wiederum 3 Kindselemente hat
@@ -31,7 +33,13 @@ posten.addEventListener('click',function(event){
       jeintrag.firstElementChild.addEventListener('dblclick',function(e){
         addTrigger(jeintrag);
       })
-      journal.appendChild(jeintrag);
+      if(posten.value=='Posten!'){
+        journal.appendChild(jeintrag);
+      }
+      else{
+        journal.replaceChild(jeintrag,element)
+      }
+    
      }
   
     //Zurücksetzen der Texteingabe und aller Werte
@@ -49,7 +57,9 @@ var addTrigger=function(element){
   content.value=element.firstElementChild.nextElementSibling.innerText;
   //counter muss upgedated werden
   count.innerHTML=content.value.length;
-  journal.removeChild(element);
+  toReplace=element;
+  console.log(toReplace);
+  
 };
 content.addEventListener('keyup',function(e){
    count.innerHTML=content.value.length;
@@ -57,6 +67,7 @@ content.addEventListener('keyup',function(e){
  [...jourEntry].forEach(function(element){
   element.firstElementChild.addEventListener('dblclick',function(e){
     addTrigger(element);
+  
   })
 });
  
