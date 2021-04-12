@@ -37,7 +37,7 @@ posten.addEventListener('click',function(event){
         journal.appendChild(jeintrag);
       }
       else{
-        journal.replaceChild(jeintrag,element)
+        journal.replaceChild(jeintrag,element);
       }
     
      }
