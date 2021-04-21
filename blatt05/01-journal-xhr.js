@@ -77,7 +77,11 @@ requisite.then((response) =>{
          jeintrag.className='j-eintrag';
          var tit = document.createElement('div');
          //Annahme: Die hinzugefügten Posts sind ja auch "Online-Posts", daher schreibe ich auch Web davor
-         tit.innerText="[WEB:]"+title.value;
+         
+         tit.innerText=title.value;
+         if (!tit.innerText.startsWith("[WEB:]")){
+             tit.innerText="[WEB:]"+tit.innerText;
+         }
          tit.className = 'titel';
          jeintrag.appendChild(tit);
          var ein= document.createElement('div');
