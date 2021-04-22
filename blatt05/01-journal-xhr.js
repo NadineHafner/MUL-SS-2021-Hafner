@@ -17,10 +17,16 @@ requisite.then((response) =>{
    var doc=(new DOMParser()).parseFromString(data,"text/html");
    //weil die Variable nur innerhalb des Blocks angegriffen werden soll: let verwenden
    //um die elemente nach datum sortieren zu können brauche ich die Posts in Arrayform
+   //date Strategie von: https://www.w3schools.com/jsref/jsref_replace.asp
    let posts=Array.from(doc.getElementsByTagName("post"));
-   
+   let testdate=(posts[0].getElementsByTagName("datum")[0].innerHTML).split(".");
+   console.log(testdate);
+   var dateObject = new Date(+testdate[2], testdate[1] - 1, +testdate[0]);
+   console.log(dateObject);
    posts.sort(function(a,b){
-      return a.getElementsByTagName("datum")[0].innerHTML.localeCompare(b.getElementsByTagName("datum")[0].innerHTML);
+      let firstdate=a.getElementsByTagName("datum")[0].innerHTML.split(".");
+      let seconddate=b.getElementsByTagName("datum")[0].innerHTML.split(".");
+      return new Date(+firstdate[2], firstdate[1] - 1, +firstdate[0])-new Date(+seconddate[2], seconddate[1] - 1, +seconddate[0]);
    });
    posts.forEach(function(post){
        console.log(post);
