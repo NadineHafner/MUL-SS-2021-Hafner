@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?xml-stylesheet href="01-dictionary.xsl" type="text/xsl"?>
+<dictionary>
+  <word value="Dog">
+    <translation lang="DE">Hund</translation>
+    <translation lang="FR">Chien</translation>
+    <translation lang="LA">Canis</translation>
+    <category>Animal</category>
+  </word>
+  <word value="Vienna">
+    <translation lang="DE">Wien</translation>
+    <translation lang="FR">Vienne</translation>
+    <category>Geography</category>
+  </word>
+  <word value="Austria">
+    <translation lang="DE">Austria</translation>
+    <translation lang="FR">Autriche</translation>
+    <category>Geography</category>
+  </word>
+  <word value="Strawberry">
+    <translation lang="DE">Erdbeere</translation>
+    <translation lang="FR">Fraise</translation>
+    <category>Food</category>
+  </word>
+  <word value="Cat">
+    <translation lang="DE">Katze</translation>
+    <translation lang="FR">Chat</translation>
+    <category>Animal</category>
+  </word>
+  <word value="Language">
+    <translation lang="DE">Sprache</translation>
+    <category>Culture</category>
+  </word>
+</dictionary>
