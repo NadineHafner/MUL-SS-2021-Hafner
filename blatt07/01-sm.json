@@ -1,0 +1,8 @@
+{"Postings":
+    [{"Posting":1, "Datum":"1.1.2020","Uhrzeit":"22:30:21","Text":"Mein allererster Post","Verfasser":"Nadine Hafner","Kategorien":
+        ["Online-Post","Langeweile"]},
+        {"Posting":2, "Datum":"2.2.2020","Uhrzeit":"22:35:21","Text":"Mein erster Post","Verfasser":"Nadine Hafner","Kategorien":
+            ["Online-Post"]},
+            {"Posting":3, "Datum":"1.1.2020","Uhrzeit":"22:30:21","Text":"Mein zweiter Post","Verfasser":"Nadine Hafner","Kategorien":
+                ["Stress"],"Bilder": ["Screenshot.jpeg","Haus.jpeg"]}
+        ]}

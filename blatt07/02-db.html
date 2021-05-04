@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <body>
+      <style>
+        H2{
+          background-color: red;
+          color: white;
+          text-align: center;
+          height: 50px;
+        }
+        #SearchCity{
+          width: 90%;
+          height:10%;
+         
+        }
+        li,h1,table,input{
+          margin-left: 50px;
+          margin-bottom: 10px;
+        }
+        table{
+          border-width:thin;
+          border-style:solid;
+        }
+      </style>
+        <h2>DB Information</h2>
+        <div class="search-content">
+            <form  autocomplete="off">
+              <div class="row form-group">
+                <input type="input" id="SearchCity" class="form-control" placeholder="Wels" value="Wels" />
+              </div>
+              
+              <div class="row">
+                <input type="button" id="SearchButton" class="btn btn-info" value="Suchen" />
+              </div>
+            </form>
+          </div>
+        <h1>Bahnhöfe</h1>
+        <div id="Bahnhöfe"></div>
+        <h1>Ankunftsinformationen</h1>
+        <table id="Ankunftsinformationen">
+            <tr><th>Nummer</th><th>Datum</th><th>Ziel</th><th>Bahnsteig</th></tr>
+        </table>
+        <script src="02-db.js"></script>
+    </body>
+</html>
