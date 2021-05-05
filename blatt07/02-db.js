@@ -1,9 +1,13 @@
 
-listEvents();
+
 var oldChild=null;
 document.getElementById("SearchButton").addEventListener('click',listEvents);
 function listEvents(){
 var city=document.getElementById("SearchCity").value;
+if(city.length==0){
+ 
+  city=document.getElementById("SearchCity").placeholder;
+}
 console.log(city);
 fetch("https://api.deutschebahn.com/freeplan/v1/location/"+city)
 .then(response => response.json())
