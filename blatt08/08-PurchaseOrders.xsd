@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<xsd:element name="PurchaseOrders">
+ <xsd:complexType>
+     <xsd:sequence>
+         <xsd:element name="PurchaseOrder" maxOccurs="unbounded">
+             <xsd:complexType>
+                
+                <xsd:sequence>
+                    <xsd:element name="Address" minOccurs="2" maxOccurs="2">
+                        <xsd:complexType>
+                            <xsd:sequence>
+                                <xsd:element name="Name">
+                                    <xsd:simpleType>
+                                        <xsd:restriction base="xsd:string"/>
+                                    </xsd:simpleType>
+
+                                </xsd:element>
+                                <xsd:element name="Street">
+                                    <xsd:simpleType>
+                                        <xsd:restriction base="xsd:string"/>
+                                    </xsd:simpleType>
+
+                                </xsd:element>
+                                <xsd:element name="City">
+                                    <xsd:simpleType>
+                                        <xsd:restriction base="xsd:string"/>
+                                    </xsd:simpleType>
+
+                                </xsd:element>
+                                <xsd:element name="State">
+                                    <xsd:simpleType>
+                                        <xsd:restriction base="xsd:string"/>
+                                    </xsd:simpleType>
+
+                                </xsd:element>
+                                <xsd:element name="Zip">
+                                    <xsd:simpleType>
+                                        <xsd:restriction base="xsd:int"/>
+                                    </xsd:simpleType>
+
+                                </xsd:element>
+                                <xsd:element name="Country">
+                                    <xsd:simpleType>
+                                        <xsd:restriction base="xsd:string"/>
+                                    </xsd:simpleType>
+
+                                </xsd:element>
+
+
+
+
+                            </xsd:sequence>
+                            <xsd:attribute name="Type">
+                                <xsd:simpleType>
+                                    <xsd:restriction base="xsd:string">
+                                        <xsd:enumeration value="Billing" />
+                                        <xsd:enumeration value="Shipping"/>
+                                        
+                                    </xsd:restriction>
+                                
+                                </xsd:simpleType>
+                            </xsd:attribute>
+
+
+                        </xsd:complexType>
+
+                    </xsd:element>
+                    <xsd:element name="DeliveryNotes" minOccurs="0">
+                    <xsd:simpleType>
+                        <xsd:restriction base="xsd:string"/>
+                    </xsd:simpleType>
+
+
+                    </xsd:element>
+                    <xsd:element name="Items">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element name="Item" maxOccurs="unbounded">
+                                <xsd:complexType>
+                                    <xsd:sequence>
+                                        <xsd:element name="ProductName">
+                                            <xsd:simpleType>
+                                                <xsd:restriction base="xsd:string"/>
+                                            </xsd:simpleType>
+                                        </xsd:element>
+                                        
+                                        <xsd:element name="Quantity">
+                                            <xsd:simpleType>
+                                                <xsd:restriction base="xsd:int"/>
+                                            </xsd:simpleType>
+                                        </xsd:element>
+                                        <xsd:element name="USPrice">
+                                            <xsd:simpleType>
+                                                <xsd:restriction base="xsd:double"/>
+                                            </xsd:simpleType>
+                                        </xsd:element>
+                                        <xsd:element name="ShipDate" minOccurs="0">
+                                            <xsd:simpleType>
+                                                <xsd:restriction base="xsd:date"/>
+                                            </xsd:simpleType>
+                                        </xsd:element>
+                                        <xsd:element name="Comment" minOccurs="0">
+                                            <xsd:simpleType>
+                                                <xsd:restriction base="xsd:string"/>
+                                            </xsd:simpleType>
+                                        </xsd:element>
+
+
+                                    </xsd:sequence>
+
+                                    <xsd:attribute name="PartNumber">
+                                        <xsd:simpleType>
+                                            <xsd:restriction base="xsd:string">
+                                            <xsd:pattern value="[0-9]{3}-[A-Z]{2}"></xsd:pattern>
+                                        </xsd:restriction>
+                                        </xsd:simpleType>
+                                        
+                                    </xsd:attribute>
+
+                                </xsd:complexType>
+
+                            </xsd:element>
+
+
+                        </xsd:sequence>
+
+
+                    </xsd:complexType>
+
+
+
+                    </xsd:element>
+
+
+
+                </xsd:sequence>
+
+
+                <xsd:attribute name="PurchaseOrderNumber" type="xsd:string" use="required"/>
+                <xsd:attribute name="OrderDate" type="xsd:date" use="required"/>
+
+             </xsd:complexType>
+         </xsd:element>
+     </xsd:sequence>
+ </xsd:complexType>
+</xsd:element>
+
+
+
+</xsd:schema>
