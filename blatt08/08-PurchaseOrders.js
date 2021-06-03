@@ -1,22 +1,26 @@
-console.log(document.getElementById("type"));
+//console.dir(document.getElementById("create"));
+window.onload=function(){
+    var button=document.getElementById("SearchButton");
+    console.log(button);
+    document.getElementById("SearchButton").addEventListener('click',addEntryToTable);
+}
+
 
 
 function addEntryToTable(){
 console.log("hello");
 var table= document.getElementById("Table");
 console.log(table);
-document.getElementById("create").addEventListener("click",addEntryToTable());
-
-
 var fullname=document.getElementById("name");
-var street=documet.getElementById("street");
+console.log(fullname.value);
+var street=document.getElementById("street");
 var city=document.getElementById("city");
 var country=document.getElementById("country");
 var type=document.getElementById("type");
 var orderDate=document.getElementById("orderDate");
 console.log("hello");
 var table= document.getElementById("Table");
-    if(fullname.value !=''){
+    if(fullname.value !='' || street.value !='' || city.value !='' || country.value !=''|| type.value !=''|| orderDate.value !=''){
         var row = table.insertRow();
         var col1=row.insertCell();
         col1.innerHTML=fullname.value;
@@ -38,5 +42,6 @@ var table= document.getElementById("Table");
     country.value='';
     type.value='';
     orderDate.value='';
+    
 
-}
+};

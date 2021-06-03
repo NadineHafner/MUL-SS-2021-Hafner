@@ -19,7 +19,7 @@
           H1, div { text-align: center }
             </style>
     
-       <script src="08-PurchaseOrders.js"></script>
+      
 
     </head>
     <body>
@@ -54,40 +54,7 @@
     
     
     </table>
-    <div>
-        <form autocomplete="off">
-            <div class="row form-group">
-                <label for="txtTitel">Name</label>
-                <input type="input" id="name" class="form-control" name="txtTitel" placeholder="Name" />
-            </div>
-            <div class="row form-group">
-                <label for="txtTitel">Street</label>
-                <input type="input" id="street" class="form-control" name="txtTitel" placeholder="Street" />
-            </div>
-            <div class="row form-group">
-                <label for="txtTitel">City</label>
-                <input type="input" id="city" class="form-control" name="txtTitel" placeholder="City" />
-            </div>
-            <div class="row form-group">
-                <label for="txtTitel">Country</label>
-                <input type="input" id="country" class="form-control" name="txtTitel" placeholder="Country" />
-            </div>
-            <div class="row form-group">
-                <label for="txtTitel">Type</label>
-                <input type="input" id="type" class="form-control" name="txtTitel" placeholder="Type" />
-            </div>
-            <div class="row form-group">
-                <label for="txtTitel">OrderDate</label>
-                <input type="input" id="orderDate" class="form-control" name="txtTitel" placeholder="OrderDate" />
-            </div>
-
-            <div class="row">
-                <button type="button" id="create" class="btn btn-info">Erstellen!</button>
-            </div>
-        </form>
-
-
-    </div>
+ 
    
     
         
